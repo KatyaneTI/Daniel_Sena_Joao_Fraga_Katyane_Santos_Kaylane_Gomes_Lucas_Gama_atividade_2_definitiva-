@@ -4,6 +4,10 @@ body{
     margin: 0 auto;
 }
 
+ul{
+    padding: 0px!important;
+}
+
 .menu-principal
 {
     width: 100%;
@@ -37,7 +41,14 @@ float: left;
 
 .header-2{
     background-color: #d8d4d4;
-    width: 100%;
+    width: 980px;
+    margin: 0 auto;
+    padding: 16
+    px;
+}
+
+.menu-urls{
+    height: 80%;
     border-bottom: 3px solid #efefef;
 }
 
@@ -60,6 +71,25 @@ float: left;
 }
 
 .busca{
+    text-align: center;
     width: 30%;
     float: right;
+}
+
+.busca input{
+    background-image: url('../img/icone');
+    background: no-repeat;
+    background-position: 96%;
+    height: 36px;
+    padding: 12px;
+    width: 190px;
+    margin-top: 10px;
+    border: 1px solid #d6d6d6;
+    
+}
+
+.col-100{
+    width: 100%;
+    float: left;
+    position: relative;
 }
