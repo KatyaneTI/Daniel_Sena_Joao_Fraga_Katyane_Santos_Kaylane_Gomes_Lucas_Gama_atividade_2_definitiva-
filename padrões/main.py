@@ -42,6 +42,7 @@ class VisitanteUsuarioFactory(UsuarioFactory):
 class BeneficiarioUsuarioFactory(UsuarioFactory):
     def create_usuario(self):
         return super().create_usuario()
+
 class Beneficio:
     def baixar_beneficios(self):{
 
