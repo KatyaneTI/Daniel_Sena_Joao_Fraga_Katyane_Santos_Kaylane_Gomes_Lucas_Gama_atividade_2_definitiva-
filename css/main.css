@@ -1,0 +1,95 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+ul{
+    padding: 0px!important;
+}
+
+.menu-principal
+{
+    width: 100%;
+    background-color: #a9a7a7;
+    height: 60px;
+}
+
+main{
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+}
+
+.logo{
+float: left;
+    padding: 15px;
+    width: 70%;
+}
+
+.acesso ul li{
+    margin-left: 15px;
+    display: inline-block;
+    float: left;
+    list-style: none;
+}
+
+.acesso{
+    width: 20%;
+    float: left;
+}
+
+.header-2{
+    background-color: #d8d4d4;
+    width: 980px;
+    margin: 0 auto;
+    padding: 16
+    px;
+}
+
+.menu-urls{
+    height: 80%;
+    border-bottom: 3px solid #efefef;
+}
+
+.menu ul li {
+    display: inline-block;
+    color: #8b8b88;
+    margin-left: 15px;
+}
+
+.menu ul li a {
+    color: #8b8b88;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.menu{
+    width: 70%;
+    float: left;
+}
+
+.busca{
+    text-align: center;
+    width: 30%;
+    float: right;
+}
+
+.busca input{
+    background-image: url('../img/icone');
+    background: no-repeat;
+    background-position: 96%;
+    height: 36px;
+    padding: 12px;
+    width: 190px;
+    margin-top: 10px;
+    border: 1px solid #d6d6d6;
+    
+}
+
+.col-100{
+    width: 100%;
+    float: left;
+    position: relative;
+}
