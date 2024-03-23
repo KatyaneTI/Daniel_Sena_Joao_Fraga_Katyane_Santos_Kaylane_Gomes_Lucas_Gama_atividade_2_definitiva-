@@ -17,8 +17,8 @@ main{
 }
 
 .logo{
-
-    padding: 16px;
+float: left;
+    padding: 15px;
     width: 70%;
 }
 
