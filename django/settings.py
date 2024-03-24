@@ -31,7 +31,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'subscriptions.urls'
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -49,7 +48,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'subscriptions.wsgi.application'
-
 
 
 DATABASES = {

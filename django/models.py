@@ -20,7 +20,6 @@ class Visitante(models.Model):
 
 class Administrador(models.Model):
     cargo = models.CharField(max_length=45, primary_key=True)
-    usuario = models.CharField(max_length=45)
     senha = models.CharField(max_length=45)
     historico = models.CharField(max_length=50)
 
