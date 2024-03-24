@@ -88,3 +88,5 @@ if __name__ == "__main__":
     v = VisitanteUsuarioFactory()
     b = BeneficiarioUsuarioFactory()
     usuario = UsuarioFacade()
+
+print("teste")
