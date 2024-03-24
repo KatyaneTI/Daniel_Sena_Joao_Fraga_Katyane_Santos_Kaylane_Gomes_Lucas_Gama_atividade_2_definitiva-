@@ -22,8 +22,8 @@ main{
 }
 
 .logo{
-float: left;
-        width: 70%;
+    float: left;
+    width: 70%;
 }
 
 .acesso ul li{
@@ -60,7 +60,7 @@ float: left;
 .menu ul li a {
     color: #8b8b88;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
