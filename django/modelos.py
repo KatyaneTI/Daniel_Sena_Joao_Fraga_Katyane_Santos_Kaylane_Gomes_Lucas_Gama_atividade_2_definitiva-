@@ -6,14 +6,7 @@ class Chat(models.Model):
     hora = models.TimeField()
 
 class Usuario(models.Model):
-    nome_completo = models.CharField(max_length=100)
-    data_nascimento = models.DateField()
-    email = models.EmailField()
-    cpf = models.CharField(max_length=15)
-    papel = models.CharField(max_length=40) 
-
-class Cidadao(models.Model):
-    id_cidadao = models.IntegerField(primary_key=True)
+    id_usuario = models.IntegerField(primary_key=True)
 
 class Beneficiario(models.Model):
     id_beneficiario = models.IntegerField(primary_key=True)
