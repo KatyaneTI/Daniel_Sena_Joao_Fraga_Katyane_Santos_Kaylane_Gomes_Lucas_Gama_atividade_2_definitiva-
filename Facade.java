@@ -7,6 +7,7 @@ public class Facade {
     public void iniciarProcesso() {
         gerarEstatisticas();
         gerarRelatorioJSON();
+        gerarRelatorioCSV();
         visualizarBeneficios();
     }
 
