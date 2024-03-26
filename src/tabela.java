@@ -1,4 +1,4 @@
-package ES2;
+package src;
 
 public class Tabela {
 	private String Coluna;
