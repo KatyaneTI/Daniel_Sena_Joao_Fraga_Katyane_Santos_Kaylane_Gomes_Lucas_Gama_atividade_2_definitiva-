@@ -19,7 +19,20 @@ public class Relatorio {
     }
 
     public void gerarRelatorio() {
-        System.out.println("Gerando relatório");
-      
+        if (tipo.equalsIgnoreCase("csv")) {
+            gerarRelatorioCSV();
+        } else if (tipo.equalsIgnoreCase("json")) {
+            gerarRelatorioJSON();
+        } else {
+            System.out.println("Tipo de relatório não suportado");
+        }
+    }
+
+    private void gerarRelatorioCSV() {
+        System.out.println("Gerando relatório no formato CSV");
+    }
+
+    private void gerarRelatorioJSON() {
+        System.out.println("Gerando relatório no formato JSON");
     }
 }
