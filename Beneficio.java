@@ -1,3 +1,4 @@
+import java.sql.*;
 import java.sql.Date;
 
 public class Beneficio {
@@ -128,5 +129,51 @@ public class Beneficio {
 
     public void setQtSmRmi(double qtSmRmi) {
         this.qtSmRmi = qtSmRmi;
+    }
+}
+private void visualizarBeneficios() {
+    String url = "jdbc:postgresql://bd.c90644aq4xwd.us-east-1.rds.amazonaws.com:5432/bd";
+    String user = "postgres";
+    String password = "bancodedados";
+
+    try (Connection conn = DriverManager.getConnection(url, user, password)) {
+        String sql = "SELECT * FROM Beneficio";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String competenciaConcessao = rs.getString("competencia_concessao");
+                    String especie = rs.getString("especie");
+                    String cid = rs.getString("cid");
+                    String cidEspecificacao = rs.getString("cid_especificacao");
+                    String despacho = rs.getString("despacho");
+                    Date dtNascimento = rs.getDate("dt_Nascimento");
+                    String sexo = rs.getString("sexo");
+                    String clientela = rs.getString("clientela");
+                    String munResid = rs.getString("mun_Resid");
+                    String vinculoDependentes = rs.getString("vinculo_dependentes");
+                    String formaFiliacao = rs.getString("forma_filiacao");
+                    String uf = rs.getString("uf");
+                    double qtSmRmi = rs.getDouble("qt_sm_rmi");
+
+                    System.out.println("Benefício " + id + ":");
+                    System.out.println("Competência de Concessão: " + competenciaConcessao);
+                    System.out.println("Espécie: " + especie);
+                    System.out.println("CID: " + cid);
+                    System.out.println("CID Especificação: " + cidEspecificacao);
+                    System.out.println("Despacho: " + despacho);
+                    System.out.println("Data de Nascimento: " + dtNascimento);
+                    System.out.println("Sexo: " + sexo);
+                    System.out.println("Clientela: " + clientela);
+                    System.out.println("Município de Residência: " + munResid);
+                    System.out.println("Vínculo Dependentes: " + vinculoDependentes);
+                    System.out.println("Forma de Filiação: " + formaFiliacao);
+                    System.out.println("UF: " + uf);
+                    System.out.println("Qt. SM RMI: " + qtSmRmi);
+                }
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
 }
