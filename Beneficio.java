@@ -16,7 +16,8 @@ public class Beneficio {
     private String uf;
     private double qtSmRmi;
 
-    // Getters e Setters
+
+    
     public int getId() {
         return id;
     }
