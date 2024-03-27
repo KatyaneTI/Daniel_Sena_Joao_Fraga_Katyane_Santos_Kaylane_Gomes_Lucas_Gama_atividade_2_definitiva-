@@ -1,5 +1,3 @@
-package src.metodoModelo;
-
 import java.util.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -153,7 +151,7 @@ class Beneficio {
 
 
 public class MetodoModelo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         List<Beneficio> beneficios = obterBeneficiosDoBancoDeDados();
 
         RelatorioBeneficios relatorioJSON = new RelatorioJSONBeneficios();
@@ -163,19 +161,22 @@ public class MetodoModelo {
         relatorioCSV.gerarRelatorio(beneficios, "relatorio.csv"); // CSV
     }
 
-    private static List<Beneficio> obterBeneficiosDoBancoDeDados() {
+    private static List<Beneficio> obterBeneficiosDoBancoDeDados() throws ClassNotFoundException {
         List<Beneficio> beneficios = new ArrayList<>();
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
 
         try {
-            String url = "jdbc:postgresql://<bd.c90644aq4xwd.us-east-1.rds.amazonaws.com>:5432/<bd>";
+            
+            String url = "jdbc:postgresql://bd.c90644aq4xwd.us-east-1.rds.amazonaws.com:5432/";
             String usuario = "postgres";
             String senha = "bancodedados";
+
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, usuario, senha);
 
-            String query = "SELECT * FROM beneficio";
+            String query = "SELECT * FROM beneficio.beneficio";
             statement = connection.prepareStatement(query);
             result = statement.executeQuery(); //execute
 
