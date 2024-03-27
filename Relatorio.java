@@ -29,10 +29,12 @@ public class Relatorio {
     }
 
     private void gerarRelatorioCSV() {
+        Tabelacsv minhaTabelacsv = new Tabelacsv();
         System.out.println("Gerando relatório no formato CSV");
     }
 
     private void gerarRelatorioJSON() {
+        TabelaJSON minhaTabelajson = new TabelaJSON();
         System.out.println("Gerando relatório no formato JSON");
     }
 }
