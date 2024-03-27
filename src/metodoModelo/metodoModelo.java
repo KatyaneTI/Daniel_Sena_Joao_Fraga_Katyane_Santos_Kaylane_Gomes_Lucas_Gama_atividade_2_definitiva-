@@ -152,7 +152,7 @@ class Beneficio {
 }
 
 
-public class metodoModelo {
+public class MetodoModelo {
     public static void main(String[] args) {
         List<Beneficio> beneficios = obterBeneficiosDoBancoDeDados();
 
