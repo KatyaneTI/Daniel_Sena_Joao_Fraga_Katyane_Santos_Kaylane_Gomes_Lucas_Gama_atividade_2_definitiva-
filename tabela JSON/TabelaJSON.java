@@ -8,7 +8,7 @@ import java.sql.Statement;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-public class Tabelacsv {
+public class TabelaJSON {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/nomedobanco";
     private static final String USUARIO = "usuario";
