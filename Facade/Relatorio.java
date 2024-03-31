@@ -1,3 +1,5 @@
+package facade;
+
 public class Relatorio {
     private int id;
     private String tipo;
