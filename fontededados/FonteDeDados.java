@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 class FonteDeDados {
     private List<Observador> observadores = new ArrayList<>();
     private static final String URL = "jdbc:postgresql://localhost:5432/INSS";
-    private static final String USER = "seu_usuario";
-    private static final String PASSWORD = "sua_senha";
+    private static final String USER = "postgre";
+    private static final String PASSWORD = "bancodedados";
 
     // Método para adicionar observadores
     public void adicionarObservador(Observador observador) {
